@@ -27,9 +27,11 @@
     cmd = nvim -d "$LOCAL" "$MERGED" "$REMOTE" -c 'wincmd l'
     keepbackup = false
 
+[push]
+    autoSetupRemote = true
 
 [init]
-	defaultBranch = main
+    defaultBranch = main
 
 [alias]
 
