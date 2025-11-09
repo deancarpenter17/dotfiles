@@ -1,0 +1,37 @@
+# Include a machine-specific config if it exists
+[includeIf "exists:~/.gitconfig.local"]
+    path = ~/.gitconfig.local
+
+[core]
+    autocrlf = input
+    editor = nvim
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    dark = true      # or light = true, or omit for auto-detection
+    side-by-side = true
+
+[diff]
+    tool = nvimdiff
+
+[difftool "nvimdiff"]
+    cmd = nvim -d "$LOCAL" "$REMOTE"
+
+[merge]
+    tool = nvimdiff
+
+[mergetool "nvimdiff"]
+    cmd = nvim -d "$LOCAL" "$MERGED" "$REMOTE" -c 'wincmd l'
+    ; cmd = "nvim -d $LOCAL $MERGED $REMOTE"
+    keepbackup = false
+
+
+[init]
+	defaultBranch = main
+
+[alias]
+
