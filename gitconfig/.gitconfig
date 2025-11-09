@@ -1,5 +1,4 @@
-# Include a machine-specific config if it exists
-[includeIf "exists:~/.gitconfig.local"]
+[include]
     path = ~/.gitconfig.local
 
 [core]
@@ -26,7 +25,6 @@
 
 [mergetool "nvimdiff"]
     cmd = nvim -d "$LOCAL" "$MERGED" "$REMOTE" -c 'wincmd l'
-    ; cmd = "nvim -d $LOCAL $MERGED $REMOTE"
     keepbackup = false
 
 
