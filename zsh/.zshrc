@@ -124,7 +124,6 @@ alias gitconfig='nvim ~/.gitconfig'
 alias nvimrc='nvim ~/.config/nvim/init.lua'
 alias zshrc='nvim ~/.zshrc'
 alias gitconfig='nvim ~/.gitconfig'
-alias zshrc='nvim ~/.zshrc'
 alias vim='nvim'
 alias cat='bat'
 
