@@ -126,7 +126,6 @@ alias zshrc='nvim ~/.zshrc'
 alias gitconfig='nvim ~/.gitconfig'
 alias vim='nvim'
 alias cat='bat'
-alias vim='nvim'
 
 # FZF (fuzzy finder)
 eval "$(fzf --zsh)"
