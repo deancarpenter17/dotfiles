@@ -84,6 +84,7 @@ plugins=(
   python
   zsh-syntax-highlighting
   zsh-autosuggestions
+  zsh-vi-mode
   copypath
   web-search
 )
@@ -124,6 +125,7 @@ alias gitconfig='nvim ~/.gitconfig'
 alias nvimrc='nvim ~/.config/nvim/init.lua'
 alias zshrc='nvim ~/.zshrc'
 alias gitconfig='nvim ~/.gitconfig'
+alias ghosttyconfig 'nvim ~/.config/ghostty/config'
 alias vim='nvim'
 alias cat='bat'
 
