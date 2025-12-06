@@ -87,6 +87,7 @@ plugins=(
   zsh-vi-mode
   copypath
   web-search
+  you-should-use
 )
 
 source $ZSH/oh-my-zsh.sh

@@ -1,0 +1,37 @@
+""" Map leader to space ---------------------
+let mapleader=" "
+
+""" VIM Shortcuts
+" Relative line number
+set rnu
+
+" Incremental Search
+set incsearch
+
+" Scroll offset
+set scrolloff=5
+
+" Get clipboard to work with system clipboard
+set clipboard^=unnamedplus
+set clipboard^=ideaput
+set clipboard^=ideaget
+
+" disable the timeout option
+set notimeout
+
+" Enables the which key popup window
+set which-key
+
+" increase the timeoutlen (default: 1000), don't add space around the equal sign
+set timeoutlen=5000
+
+""" Editor Actions
+map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>c <Action>(VcsShowNextChangeMarker)
+map <leader>C <Action>(VcsShowPrevChangeMarker)
+map <leader>e <Action>(GotoNextError)
+map <leader>E <Action>(GotoPreviousError)
+map <leader>g <Action>(Gradle.ExecuteTask)
+map <leader>i <Action>(ShowHoverInfo)
+
+
