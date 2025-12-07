@@ -22,8 +22,17 @@ set notimeout
 " Enables the which key popup window
 set which-key
 
-" increase the timeoutlen (default: 1000), don't add space around the equal sign
+" Increase the timeoutlen (default: 1000), don't add space around the equal sign
 set timeoutlen=5000
+
+" Highlights current search
+set hlsearch
+
+" Ignores case when searching
+set ignorecase
+
+" Case-insensitive unless you type an uppercase letter
+set smartcase
 
 """ Editor Actions
 map <leader>b <Action>(ToggleLineBreakpoint)
@@ -33,5 +42,32 @@ map <leader>e <Action>(GotoNextError)
 map <leader>E <Action>(GotoPreviousError)
 map <leader>g <Action>(Gradle.ExecuteTask)
 map <leader>i <Action>(ShowHoverInfo)
+map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+map <leader>z <Action>(Vcs.RollbackChangedLines)
+map <leader>u <Action>(ShowUsages)
+map <leader>U <Action>(FindUsages)
 
+nmap <leader>x <Action>(HideAllWindows)
+
+" Delete motions -- Don't save to clipboard
+nnoremap d "_d
+nnoremap x "_x
+
+""" Ideavim Plugins
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-commentary'
+Plug 'vim-scripts/argtextobj.vim'
+
+
+" Which‑key descriptions for leader mappings
+let g:WhichKeyDesc_bp = "<leader>b Toggle breakpoint"
+let g:WhichKeyDesc_vcn = "<leader>c Next VCS change"
+let g:WhichKeyDesc_vcp = "<leader>C Previous VCS change"
+let g:WhichKeyDesc_en = "<leader>e Next error"
+let g:WhichKeyDesc_ep = "<leader>E Previous error"
+let g:WhichKeyDesc_gr = "<leader>g Run Gradle task"
+let g:WhichKeyDesc_hi = "<leader>i Hover info"
+let g:WhichKeyDesc_hh = "<leader>h VCS history"
+let g:WhichKeyDesc_ur = "<leader>u Rollback changes"
+let g:WhichKeyDesc_hw = "<leader>x Hide windows"
 
