@@ -39,7 +39,7 @@
             shift; \
             git -c color.status=always status --short | \
             fzf -m --ansi \
-                --preview \"git diff --color=always -- {-1} | head -500\" \
+                --preview \"git diff --color=always -- {-1} | delta | head -500\" \
                 --bind \"ctrl-a:select-all,ctrl-d:deselect-all\" \
                 --header \"Select files for git $cmd (TAB: Toggle | CTRL-A: All)\" | \
             cut -c4- | \
