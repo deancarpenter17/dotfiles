@@ -34,15 +34,16 @@
     defaultBranch = main
 
 [alias]
-    pick = "!f() { \
-            cmd=$1; \
-            shift; \
-            git -c color.status=always status --short | \
-            fzf -m --ansi \
-                --preview \"git diff --color=always -- {-1} | delta | head -500\" \
-                --bind \"ctrl-a:select-all,ctrl-d:deselect-all\" \
-                --header \"Select files for git $cmd (TAB: Toggle | CTRL-A: All)\" | \
-            cut -c4- | \
-            tr \"\\n\" \"\\0\" | \
-            xargs -0 -r git \"$cmd\" \"$@\"; \
-        }; f"
+  pick = "!f() { \
+    cmd=$1; \
+    shift; \
+    git status --short | \
+    cut -c4- | \
+    fzf -m \
+      --preview 'git diff HEAD --color=always -- {} | delta --width=$FZF_PREVIEW_COLUMNS | head -500' \
+      --preview-window 'up,80%' \
+      --bind 'ctrl-a:select-all,ctrl-x:deselect-all,ctrl-u:preview-half-page-up,ctrl-d:preview-half-page-down' \
+      --header 'Select files for git $cmd (TAB: Toggle | CTRL-A: All)' | \
+    tr \"\\n\" \"\\0\" | \
+    xargs -0 -r git \"$cmd\" \"$@\"; \
+  }; f"
