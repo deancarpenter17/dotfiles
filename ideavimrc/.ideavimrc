@@ -46,6 +46,7 @@ map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
 map <leader>z <Action>(Vcs.RollbackChangedLines)
 map <leader>u <Action>(ShowUsages)
 map <leader>U <Action>(FindUsages)
+map <leader>l <Action>(GitHub.Copy.Link)
 
 nmap <leader>x <Action>(HideAllWindows)
 
@@ -70,4 +71,5 @@ let g:WhichKeyDesc_hi = "<leader>i Hover info"
 let g:WhichKeyDesc_hh = "<leader>h VCS history"
 let g:WhichKeyDesc_ur = "<leader>u Rollback changes"
 let g:WhichKeyDesc_hw = "<leader>x Hide windows"
+let g:WhichKeyDesc_gcl = "<leader>l Copy Github Link"
 
